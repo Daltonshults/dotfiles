@@ -66,7 +66,7 @@ unset color_prompt force_color_prompt
 # If this is an xterm set the title to user@host:dir
 case "$TERM" in
 xterm*|rxvt*)
-    PS1='\[\e[0;38;5;124m\]\u\[\e[0;38;5;88m\]@ \[\e[0;38;5;118m\]\T \[\e[0;38;5;118m\]\d \[\e[0m\]+\[\e[0;38;5;57m\]$(git branch 2>/dev/null | grep '"'"'^*'"'"' | colrm 1 2) \[\e[0;1;38;5;57m\]\w\[\e[0m\] 👾 '
+    PS1='\[\e[0;38;5;33m\]\u\[\e[0;38;5;33m\]@ \[\e[0;38;5;118m\]\T \[\e[0;38;5;118m\]\d \[\e[0m\][$(git branch 2>/dev/null | grep '"'"'^*'"'"' | colrm 1 2)] \[\e[0;1;38;5;57m\]\w\[\e[0m\] 👾 '
     ;;
 *)
     ;;
@@ -102,6 +102,8 @@ alias data='cd ~/data_structures'
 alias soft='cd ~/software_dev'
 alias status='git status'
 alias ho='cd ~'
+alias pu='git push'
+alias com="git commit -m '"
 
 # Add an "alert" alias for long running commands.  Use like so:
 #   sleep 10; alert
